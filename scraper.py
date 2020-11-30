@@ -24,12 +24,15 @@ os.makedirs('screenshots', exist_ok=True)
 cwd = os.getcwd()
 csv_path = ''.join((cwd, '/data/', timestamp, '.csv'))
 
-# create headless Firefox WebDriver instance
-# options = Options()
-# options.headless = True
-# driver = Firefox(executable_path='/usr/local/bin/geckodriver', options=options)
-driver = Firefox(executable_path='/usr/local/bin/geckodriver')  # DELETE
-driver.maximize_window()
+
+def create_driver():
+    """Creates headless Firefox WebDriver instance."""
+    options = Options()
+    options.headless = True
+    return Firefox(executable_path='/usr/local/bin/geckodriver', options=options)
+
+
+driver = create_driver()
 
 
 def take_screenshot():
@@ -208,7 +211,7 @@ def merge_dfs(left_df, right_df):
     return pd.merge(left_df, right_df, left_index=True, right_index=True)
 
 
-def set_price(max_price: str):
+def adjust_price(max_price: str):
     """Filters diamonds results based on price range."""
     perform_actions('min_price_display', max_price)
     sleep(3)
@@ -225,7 +228,6 @@ def final_cleaning(df, diamond_type):
 
 def to_csv(df):
     """Writes a CSV file in the 'data' directory."""
-    # remove duplicate rows
     df = df.drop_duplicates()
     df.to_csv(csv_path, index=False)
 
@@ -270,7 +272,7 @@ def main():
             # scrape remaining rows by iterating the price range
             while True:
                 # scrape diamonds table
-                set_price(prev_max_price)
+                adjust_price(prev_max_price)
                 table_scroll()
 
                 # create and clean DataFrame, and append to 'df1' (created in first pass)

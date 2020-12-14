@@ -1,5 +1,5 @@
 # About
-:gem: DiamondScraper is a simple Python web-scraper for [BrilliantEarth.com](https://www.brilliantearth.com). 
+`DiamondScraper` is a simple Python web-scraper for [BrilliantEarth.com](https://www.brilliantearth.com). 
 
 It scrapes data for both its natural and lab created diamond selection and writes it to a CSV file.
 

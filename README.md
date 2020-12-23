@@ -4,6 +4,7 @@
 It scrapes data for both its natural and lab created diamond selection and writes it to a CSV file.
 
 ## Requirements
+- Firefox browser
 - pip install `gazpacho=1.1`
 - conda install `pandas=1.1.3`
 - conda install `selenium=3.141.0`

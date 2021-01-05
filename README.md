@@ -1,7 +1,10 @@
-# DiamondScraper
-A simple Python web-scraper for [BrilliantEarth.com](https://www.brilliantearth.com). 
+# About
+DiamondScraper is a simple Python web scraper for [BrilliantEarth.com](https://www.brilliantearth.com). It scrapes data for both its natural and lab created diamond selection and writes it to a CSV file.  
 
-It scrapes data for both its natural and lab created diamond selection and writes it to a CSV file.
+## Inspiration
+Buying a diamond can be frustrating and expensive.
+
+I built DiamondScraper to create a dataset of natural and lab-created diamonds to demystify the value of the 4 Cs – cut, color, clarity, carat.
 
 ## Requirements
 - Firefox browser & [geckodriver](https://selenium-python.readthedocs.io/installation.html#drivers)

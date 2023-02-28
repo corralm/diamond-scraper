@@ -37,7 +37,7 @@ There is also a script `processing.py` to cast categorical data types for a Data
 ## Meta
 Author: Miguel Corral Jr.  
 Email: corraljrmiguel@gmail.com  
-LinkedIn: https://www.linkedin.com/in/miguelcorraljr/  
+LinkedIn: https://www.linkedin.com/in/iMiguel 
 GitHub: https://github.com/corralm
 
 Distributed under the GNU General Public License v3.0. See [LICENSE](./LICENSE) for more information.
